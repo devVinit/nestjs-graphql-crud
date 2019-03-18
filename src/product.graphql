@@ -1,7 +1,7 @@
 type Product {
   id: ID!
   productName: String!
-  productDescription: String!
+  productDescription: String
   price: Int!
   isInStock: Boolean!
   image: String!
@@ -9,4 +9,11 @@ type Product {
 
 type Query {
   products: [Product!]
+  product(id: Int): Product
+}
+
+type Mutation {
+  createProduct(productName: String!, productDescription: String, price: Int!, isInStock: Boolean, image: String ): Product
+  updateProduct(id: ID!, productName: String!, productDescription: String, price: Int!, isInStock: Boolean, image: String): Product
+  deleteProduct(id: ID!): Product
 }

@@ -8,7 +8,7 @@ export class ProductEntity {
   @Column({ name: 'productName' })
   productName: string;
 
-  @Column({ name: 'productDescription' })
+  @Column({ name: 'productDescription', nullable: true })
   productDescription: string;
 
   @Column({ name: 'price' })
@@ -19,5 +19,4 @@ export class ProductEntity {
 
   @Column({ name: 'image', length: 2083 })
   image: string;
-
 }
