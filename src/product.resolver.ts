@@ -43,9 +43,4 @@ export class ProductResolver {
   async deleteProduct(@Args('id') id: string) {
     return await this.productService.delete(id);
   }
-
-  // @ResolveProperty(@Args() id)_
-  // asyc product() {
-  //   return await this.productService.getById();
-  // }
 }
